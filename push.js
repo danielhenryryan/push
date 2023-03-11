@@ -5,11 +5,20 @@ let vapidKeys = {
   privateKey: 'Py2JZLZlquKej9ayOpc8iNXFdzoOVrD7XaaSNP0kK7Y'
 };
 
-push.setVapidDetails('danielhenryryan@gmail.com',vapidKeys.publicKey,vapidKeys.privateKey);
-
 let sub = {
-
+  endpoint: "https://fcm.googleapis.com/fcm/send/fzyE33kmmWE:APA91bFNelzFFQBkcJEQJsM4KZJ0ae9-FN4zrmSqyMeycc_Dl085cQ949s2Emq9UYKIzLvqGt94DLbv8-bH6QCx1HA-ynEkd1GAy-A3uz71JMxNMN3IFSRwCRRp_SLpo-38FkxHXMWn6",
+  expirationTime: null,
+  keys: {
+    p256dh: "BCvOTUU0yYLHzFKO_AVhpkfTox0RgQxT3_aUIwt6Mg_sYeFkOGLD_JLLa601ZIBk_kn_IktQ1SOJWoXYtGKD524",
+    auth: "Vi8ASqP3szrO18SV3a768Q"
+  }
 }
+
+push.setVapidDetails(
+  'danielhenryryan@gmail.com',
+  vapidKeys.publicKey,
+  vapidKeys.privateKey
+);
 
 push.sendNotification(sub, 'test message');
 
