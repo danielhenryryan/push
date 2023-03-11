@@ -12,7 +12,7 @@ self.addEventListener('push', (e) => {
       {action: 'close',title: 'Close', icon: 'images/xmark.png'},
     ]
   };
-  e.waitUnitl(
+  e.waitUntil(
     self.registration.showNotification('Hello world!',options)
   )
 })

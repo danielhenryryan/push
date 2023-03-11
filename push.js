@@ -15,7 +15,7 @@ let sub = {
 }
 
 push.setVapidDetails(
-  'danielhenryryan@gmail.com',
+  'mailto:danielhenryryan@gmail.com',
   vapidKeys.publicKey,
   vapidKeys.privateKey
 );
